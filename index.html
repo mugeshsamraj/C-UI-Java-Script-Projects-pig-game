@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIG Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="first-pg" id="first-pg">
+            <div class="rules" id="rules">
+                <ul>
+                    <li>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold".</li>
+                    <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+                    <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+                    <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+                    <li>The first player to score 50 or more points wins.</li>
+                </ul>
+            </div>
+            <div class="user-inputs">
+                <input id="player--0" type="text" placeholder="Player-1" value="" name="username">
+                <input id="player--1" type="text" placeholder="Player-2" value="" name="username">
+                <button class="btn-enter" id="btn-enter">Enter</button>
+            </div>
+        </div>
+        <div class="container" id="main-game">
+             <!-- <span class="close">&times;</span> -->
+            <section class="player player--0 player--active">
+                <div class="t-score">
+                    <h2 class="name" id="name--0">
+                        Total Score<br>
+                        <span class="pl">Player 1</span>
+                    </h2>
+                    <p class="score" id="score--0">0</p>
+                </div>
+    
+                <div class="current">
+                    <p class="current-label">Current Score</p>
+    
+                    <p class="current-score" id="current--0">0</p>
+    
+                </div>
+            </section>
+    
+            <section class="player player--1">
+                <div class="t-score">
+                    <h2 class="name" id="name--1">
+                        Total Score<br>
+                        <span class="pl">Player 2</span>
+                    </h2>
+                    <p class="score" id="score--1">0</p>
+                </div>
+    
+                <div class="current">
+                    <p class="current-label">Current Score</p>
+    
+                    <p class="current-score" id="current--1">0</p>
+    
+                </div>
+            </section>
+    
+            <img src="./images/dice-5.png" alt="Playing dice" class="dice" />
+            <button class="btn btn--new">Start Game</button>
+            <button class="btn btn--roll">Roll dice</button>
+            <button class="btn btn--hold">Hold</button>
+        </div>
+    </main>
+    
+</body>
+<script src="script.js"></script>
+</html>
